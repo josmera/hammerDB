@@ -46,6 +46,9 @@ sudo service mysql stop
 #Inicar el servicio MySQL para que arranque con la nueva configuración
 sudo service mysql start
 
+#Instalar la libreria cliente por si no se instalo correctamente
+sudo apt-get install libmysqlclient-dev
+
 #Instalación de paquete para descarga instalador HammerDB
 sudo apt-get install -y curl
 
@@ -61,6 +64,18 @@ wget --no-check-certificate --content-disposition https://github.com/TPC-Council
 
 #Descompresión de archivo instalador HammerDB
 tar -zxvf HammerDB-4.1-Linux.tar.gz
+
+#Borrar el archivo comprimido del instalador HammerDB
+rm -rf HammerDB-4.1-Linux.tar.gz
+
+#Eliminar el archivo de configuración de la ruta del socket de MySQL
+rm -rf HammerDB-4.1/config/mysql.xml
+
+#Cambiar de directorio para copiar el mysql.xml modificado
+cd HammerDB-4.1/config/
+
+#Descargar nuevo mysql.xml
+wget --no-check-certificate --content-disposition https://github.com/josmera/hammerDB/blob/master/mysql.xml
 
 #Instalación paquete adicional para métricas de CPU
 sudo apt install sysstat -y
