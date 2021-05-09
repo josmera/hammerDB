@@ -1,12 +1,12 @@
-sudo apt-get remove --purge mysql*
+sudo apt-get remove -y --purge mysql*
 
-sudo apt-get purge mysql*
+sudo apt-get purge -y mysql*
 
-sudo apt-get autoremove
+sudo apt-get autoremove -y
 
-sudo apt-get autoclean
+sudo apt-get autoclean -y
 
-sudo apt-get remove dbconfig-mysql
+sudo apt-get remove -y dbconfig-mysql
 
 #Actualizar el sistema operativo
 sudo apt-get update
