@@ -69,13 +69,13 @@ tar -zxvf HammerDB-4.1-Linux.tar.gz
 rm -rf HammerDB-4.1-Linux.tar.gz
 
 #Eliminar el archivo de configuración de la ruta del socket de MySQL
-rm -rf HammerDB-4.1/config/mysql.xml
+#rm -rf HammerDB-4.1/config/mysql.xml
 
 #Cambiar de directorio para copiar el mysql.xml modificado
-cd HammerDB-4.1/config/
+#cd HammerDB-4.1/config/
 
 #Descargar nuevo mysql.xml
-wget --no-check-certificate --content-disposition https://github.com/josmera/hammerDB/blob/master/mysql.xml
+#wget --no-check-certificate --content-disposition https://github.com/josmera/hammerDB/blob/master/mysql.xml
 
 #Instalación paquete adicional para métricas de CPU
 sudo apt install sysstat -y
