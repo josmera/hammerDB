@@ -65,9 +65,6 @@ sudo apt-get install -y libxft2:amd64
 #Descarga del instalador HammerDB desde el repositorio GitHub oficial
 wget --no-check-certificate --content-disposition https://github.com/TPC-Council/HammerDB/releases/download/v4.1/HammerDB-4.1-Linux.tar.gz
 
-#Descarga de HammerDB a la carpeta por defecto
-curl –LJO https://github.com/TPC-Council/HammerDB/releases/download/v4.1/HammerDB-4.1-Linux.tar.gz
-
 #Descompresión de archivo instalador HammerDB
 tar -zxvf HammerDB-4.1-Linux.tar.gz
 
