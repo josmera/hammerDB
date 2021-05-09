@@ -17,7 +17,7 @@ return
 }
 puts "SETTING CONFIGURATION"
 dbset db mysql
-diset connection mysql_host 192.168.1.1
+diset connection mysql_host 127.0.0.1
 diset connection mysql_port 3306
 diset connection mysql_socket /var/run/mysqld/mysqld.sock
 diset tpcc mysql_driver timed
