@@ -1,4 +1,4 @@
-$ more mysqlrun.tcl
+
 #!/bin/tclsh
 proc runtimer { seconds } {
 set x 0
