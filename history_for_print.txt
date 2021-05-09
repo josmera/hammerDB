@@ -1,0 +1,43 @@
+    43  sudo apt-get install -y gparted
+   44  git clone https://github.com/josmera/hammerDB.git
+   45  ls
+   46  cd hammerDB/
+   47  ls
+   48  chmod +x ./
+   49  ls
+   50  chmod +x script.sh 
+   51  ./script.sh 
+   52  ls
+   53  cd HammerDB-4.1/
+   54  ./hammerdb
+   55  ./hammerdbcli 
+   56  /sbin/ldconfig -p | grep mysql | cut -d\> -f2
+   57  sudo apt-get install libmysqlclient-dev
+   58  /sbin/ldconfig -p | grep mysql | cut -d\> -f2
+   59  ls 
+   60  cd hammerDB/
+   61  ls 
+   62  cd HammerDB-4.1/
+   63  ./hammerdb
+   64  ls
+   65  cd config/
+   66  ls
+   67  nano mysql.xml 
+   68  cd ..
+   69  ./hammerdb
+   70  cd hammerDB/
+   71  ls
+   72  git status
+   73  git add --all
+   74  git commit -m "mysql.xml con la ruta correcta"
+   75  git config --global user.email "josmera@gmail.com" & git config --global user.name "josmera"
+   76  git commit -m "mysql.xml con la ruta correcta"
+   77  git push origin master
+   78  git pull
+   79  git pull upstream master
+   80  git pull master
+   81  git pull 
+   82  ls
+   83  git status
+   84  git push origin master
+   85  history > history_for_print.txt
