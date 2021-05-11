@@ -36,5 +36,3 @@ vudestroy
 after 5000
         }
 puts "TEST SEQUENCE COMPLETE"
-
-waittocomplete

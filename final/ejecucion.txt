@@ -1,0 +1,762 @@
+HammerDB CLI v4.1
+Copyright (C) 2003-2021 Steve Shaw
+Type "help" for a list of commands
+The xml is well-formed, applying configuration
+SETTING CONFIGURATION
+Database set to MySQL
+Value 127.0.0.1 for connection:mysql_host is the same as existing value 127.0.0.1, no change made
+Value 3306 for connection:mysql_port is the same as existing value 3306, no change made
+Changed connection:mysql_socket from /tmp/mysql.sock to /var/run/mysqld/mysqld.sock for MySQL
+Clearing Script, reload script to activate new setting
+Script cleared
+Changed tpcc:mysql_driver from test to timed for MySQL
+Usage: diset dict key value
+Dictionary "tpcc" for MySQL exists but key "my_duration" doesn't
+Type "print dict" for valid dictionaries and keys for MySQL
+Usage: diset dict key value
+Dictionary "tpcc" for MySQL exists but key "pg_vacuum" doesn't
+Type "print dict" for valid dictionaries and keys for MySQL
+Dictionary Settings for MySQL
+connection {
+ mysql_host   = 127.0.0.1
+ mysql_port   = 3306
+ mysql_socket = /var/run/mysqld/mysqld.sock
+}
+tpcc       {
+ mysql_count_ware       = 1
+ mysql_num_vu           = 1
+ mysql_user             = root
+ mysql_pass             = mysql
+ mysql_dbase            = tpcc
+ mysql_storage_engine   = innodb
+ mysql_partition        = false
+ mysql_prepared         = false
+ mysql_total_iterations = 1000000
+ mysql_raiseerror       = false
+ mysql_keyandthink      = false
+ mysql_driver           = timed
+ mysql_rampup           = 2
+ mysql_duration         = 5
+ mysql_allwarehouse     = false
+ mysql_timeprofile      = false
+ mysql_async_scale      = false
+ mysql_async_client     = 10
+ mysql_async_verbose    = false
+ mysql_async_delay      = 1000
+ mysql_connect_pool     = false
+}
+Script loaded, Type "print script" to view
+SEQUENCE STARTED
+1 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+2 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Timer: 2 minutes elapsed
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 3 minutes elapsed
+Vuser 1:1 ...,
+Timer: 4 minutes elapsed
+Vuser 1:2 ...,
+Timer: 5 minutes elapsed
+Vuser 1:3 ...,
+Timer: 6 minutes elapsed
+Vuser 1:4 ...,
+Timer: 7 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:1 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 344 NOPM from 1001 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+2 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+3 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Timer: 2 minutes elapsed
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 3 minutes elapsed
+Vuser 1:1 ...,
+Timer: 4 minutes elapsed
+Vuser 1:2 ...,
+Timer: 5 minutes elapsed
+Vuser 1:3 ...,
+Timer: 6 minutes elapsed
+Vuser 1:4 ...,
+Timer: 7 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:2 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 509 NOPM from 1489 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+4 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+5 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Timer: 2 minutes elapsed
+Vuser 1:Timing test period of 5 in minutes
+Timer: 3 minutes elapsed
+Vuser 1:1 ...,
+Timer: 4 minutes elapsed
+Vuser 1:2 ...,
+Timer: 5 minutes elapsed
+Vuser 1:3 ...,
+Timer: 6 minutes elapsed
+Vuser 1:4 ...,
+Timer: 7 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:4 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 670 NOPM from 2016 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+8 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+9 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 2 minutes elapsed
+Vuser 1:1 ...,
+Timer: 3 minutes elapsed
+Vuser 1:2 ...,
+Timer: 4 minutes elapsed
+Vuser 1:3 ...,
+Timer: 5 minutes elapsed
+Vuser 1:4 ...,
+Timer: 6 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Timer: 7 minutes elapsed
+Vuser 1:8 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 752 NOPM from 2259 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Timer: 8 minutes elapsed
+Vuser 5:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+16 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+17 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 2 minutes elapsed
+Vuser 1:1 ...,
+Timer: 3 minutes elapsed
+Vuser 1:2 ...,
+Timer: 4 minutes elapsed
+Vuser 1:3 ...,
+Timer: 5 minutes elapsed
+Vuser 1:4 ...,
+Timer: 6 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:16 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 718 NOPM from 2274 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Timer: 7 minutes elapsed
+Vuser 3:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 12:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+32 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Vuser 18 created - WAIT IDLE
+Vuser 19 created - WAIT IDLE
+Vuser 20 created - WAIT IDLE
+Vuser 21 created - WAIT IDLE
+Vuser 22 created - WAIT IDLE
+Vuser 23 created - WAIT IDLE
+Vuser 24 created - WAIT IDLE
+Vuser 25 created - WAIT IDLE
+Vuser 26 created - WAIT IDLE
+Vuser 27 created - WAIT IDLE
+Vuser 28 created - WAIT IDLE
+Vuser 29 created - WAIT IDLE
+Vuser 30 created - WAIT IDLE
+Vuser 31 created - WAIT IDLE
+Vuser 32 created - WAIT IDLE
+Vuser 33 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+33 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 18:RUNNING
+Vuser 18:Processing 1000000 transactions with output suppressed...
+Vuser 19:RUNNING
+Vuser 19:Processing 1000000 transactions with output suppressed...
+Vuser 20:RUNNING
+Vuser 20:Processing 1000000 transactions with output suppressed...
+Vuser 21:RUNNING
+Vuser 21:Processing 1000000 transactions with output suppressed...
+Vuser 22:RUNNING
+Vuser 22:Processing 1000000 transactions with output suppressed...
+Vuser 23:RUNNING
+Vuser 23:Processing 1000000 transactions with output suppressed...
+Vuser 24:RUNNING
+Vuser 24:Processing 1000000 transactions with output suppressed...
+Vuser 25:RUNNING
+Vuser 25:Processing 1000000 transactions with output suppressed...
+Vuser 26:RUNNING
+Vuser 26:Processing 1000000 transactions with output suppressed...
+Vuser 27:RUNNING
+Vuser 27:Processing 1000000 transactions with output suppressed...
+Vuser 28:RUNNING
+Vuser 28:Processing 1000000 transactions with output suppressed...
+Vuser 29:RUNNING
+Vuser 29:Processing 1000000 transactions with output suppressed...
+Vuser 30:RUNNING
+Vuser 30:Processing 1000000 transactions with output suppressed...
+Vuser 31:RUNNING
+Vuser 31:Processing 1000000 transactions with output suppressed...
+Vuser 32:RUNNING
+Vuser 32:Processing 1000000 transactions with output suppressed...
+Vuser 33:RUNNING
+Vuser 33:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 2 minutes elapsed
+Vuser 1:1 ...,
+Timer: 3 minutes elapsed
+Vuser 1:2 ...,
+Timer: 4 minutes elapsed
+Vuser 1:3 ...,
+Timer: 5 minutes elapsed
+Vuser 1:4 ...,
+Timer: 6 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:32 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 709 NOPM from 2209 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 22:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 26:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 31:FINISHED SUCCESS
+Vuser 18:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 25:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 19:FINISHED SUCCESS
+Vuser 24:FINISHED SUCCESS
+Timer: 7 minutes elapsed
+Vuser 33:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 32:FINISHED SUCCESS
+Vuser 21:FINISHED SUCCESS
+Vuser 30:FINISHED SUCCESS
+Vuser 29:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 27:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 12:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 28:FINISHED SUCCESS
+Vuser 20:FINISHED SUCCESS
+Vuser 23:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+64 VU TEST
+Vuser 1 created MONITOR - WAIT IDLE
+Vuser 2 created - WAIT IDLE
+Vuser 3 created - WAIT IDLE
+Vuser 4 created - WAIT IDLE
+Vuser 5 created - WAIT IDLE
+Vuser 6 created - WAIT IDLE
+Vuser 7 created - WAIT IDLE
+Vuser 8 created - WAIT IDLE
+Vuser 9 created - WAIT IDLE
+Vuser 10 created - WAIT IDLE
+Vuser 11 created - WAIT IDLE
+Vuser 12 created - WAIT IDLE
+Vuser 13 created - WAIT IDLE
+Vuser 14 created - WAIT IDLE
+Vuser 15 created - WAIT IDLE
+Vuser 16 created - WAIT IDLE
+Vuser 17 created - WAIT IDLE
+Vuser 18 created - WAIT IDLE
+Vuser 19 created - WAIT IDLE
+Vuser 20 created - WAIT IDLE
+Vuser 21 created - WAIT IDLE
+Vuser 22 created - WAIT IDLE
+Vuser 23 created - WAIT IDLE
+Vuser 24 created - WAIT IDLE
+Vuser 25 created - WAIT IDLE
+Vuser 26 created - WAIT IDLE
+Vuser 27 created - WAIT IDLE
+Vuser 28 created - WAIT IDLE
+Vuser 29 created - WAIT IDLE
+Vuser 30 created - WAIT IDLE
+Vuser 31 created - WAIT IDLE
+Vuser 32 created - WAIT IDLE
+Vuser 33 created - WAIT IDLE
+Vuser 34 created - WAIT IDLE
+Vuser 35 created - WAIT IDLE
+Vuser 36 created - WAIT IDLE
+Vuser 37 created - WAIT IDLE
+Vuser 38 created - WAIT IDLE
+Vuser 39 created - WAIT IDLE
+Vuser 40 created - WAIT IDLE
+Vuser 41 created - WAIT IDLE
+Vuser 42 created - WAIT IDLE
+Vuser 43 created - WAIT IDLE
+Vuser 44 created - WAIT IDLE
+Vuser 45 created - WAIT IDLE
+Vuser 46 created - WAIT IDLE
+Vuser 47 created - WAIT IDLE
+Vuser 48 created - WAIT IDLE
+Vuser 49 created - WAIT IDLE
+Vuser 50 created - WAIT IDLE
+Vuser 51 created - WAIT IDLE
+Vuser 52 created - WAIT IDLE
+Vuser 53 created - WAIT IDLE
+Vuser 54 created - WAIT IDLE
+Vuser 55 created - WAIT IDLE
+Vuser 56 created - WAIT IDLE
+Vuser 57 created - WAIT IDLE
+Vuser 58 created - WAIT IDLE
+Vuser 59 created - WAIT IDLE
+Vuser 60 created - WAIT IDLE
+Vuser 61 created - WAIT IDLE
+Vuser 62 created - WAIT IDLE
+Vuser 63 created - WAIT IDLE
+Vuser 64 created - WAIT IDLE
+Vuser 65 created - WAIT IDLE
+Logging activated
+to /tmp/hammerdb.log
+65 Virtual Users Created with Monitor VU
+Vuser 1:RUNNING
+Vuser 1:Beginning rampup time of 2 minutes
+Vuser 2:RUNNING
+Vuser 2:Processing 1000000 transactions with output suppressed...
+Vuser 3:RUNNING
+Vuser 3:Processing 1000000 transactions with output suppressed...
+Vuser 4:RUNNING
+Vuser 4:Processing 1000000 transactions with output suppressed...
+Vuser 5:RUNNING
+Vuser 5:Processing 1000000 transactions with output suppressed...
+Vuser 6:RUNNING
+Vuser 6:Processing 1000000 transactions with output suppressed...
+Vuser 7:RUNNING
+Vuser 7:Processing 1000000 transactions with output suppressed...
+Vuser 8:RUNNING
+Vuser 8:Processing 1000000 transactions with output suppressed...
+Vuser 9:RUNNING
+Vuser 9:Processing 1000000 transactions with output suppressed...
+Vuser 10:RUNNING
+Vuser 10:Processing 1000000 transactions with output suppressed...
+Vuser 11:RUNNING
+Vuser 11:Processing 1000000 transactions with output suppressed...
+Vuser 12:RUNNING
+Vuser 12:Processing 1000000 transactions with output suppressed...
+Vuser 13:RUNNING
+Vuser 13:Processing 1000000 transactions with output suppressed...
+Vuser 14:RUNNING
+Vuser 14:Processing 1000000 transactions with output suppressed...
+Vuser 15:RUNNING
+Vuser 15:Processing 1000000 transactions with output suppressed...
+Vuser 16:RUNNING
+Vuser 16:Processing 1000000 transactions with output suppressed...
+Vuser 17:RUNNING
+Vuser 17:Processing 1000000 transactions with output suppressed...
+Vuser 18:RUNNING
+Vuser 18:Processing 1000000 transactions with output suppressed...
+Vuser 19:RUNNING
+Vuser 19:Processing 1000000 transactions with output suppressed...
+Vuser 20:RUNNING
+Vuser 20:Processing 1000000 transactions with output suppressed...
+Vuser 21:RUNNING
+Vuser 21:Processing 1000000 transactions with output suppressed...
+Vuser 22:RUNNING
+Vuser 22:Processing 1000000 transactions with output suppressed...
+Vuser 23:RUNNING
+Vuser 23:Processing 1000000 transactions with output suppressed...
+Vuser 24:RUNNING
+Vuser 24:Processing 1000000 transactions with output suppressed...
+Vuser 25:RUNNING
+Vuser 25:Processing 1000000 transactions with output suppressed...
+Vuser 26:RUNNING
+Vuser 26:Processing 1000000 transactions with output suppressed...
+Vuser 27:RUNNING
+Vuser 27:Processing 1000000 transactions with output suppressed...
+Vuser 28:RUNNING
+Vuser 28:Processing 1000000 transactions with output suppressed...
+Vuser 29:RUNNING
+Vuser 29:Processing 1000000 transactions with output suppressed...
+Vuser 30:RUNNING
+Vuser 30:Processing 1000000 transactions with output suppressed...
+Vuser 31:RUNNING
+Vuser 31:Processing 1000000 transactions with output suppressed...
+Vuser 32:RUNNING
+Vuser 32:Processing 1000000 transactions with output suppressed...
+Vuser 33:RUNNING
+Vuser 33:Processing 1000000 transactions with output suppressed...
+Vuser 34:RUNNING
+Vuser 34:Processing 1000000 transactions with output suppressed...
+Vuser 35:RUNNING
+Vuser 35:Processing 1000000 transactions with output suppressed...
+Vuser 36:RUNNING
+Vuser 36:Processing 1000000 transactions with output suppressed...
+Vuser 37:RUNNING
+Vuser 37:Processing 1000000 transactions with output suppressed...
+Vuser 38:RUNNING
+Vuser 38:Processing 1000000 transactions with output suppressed...
+Vuser 39:RUNNING
+Vuser 39:Processing 1000000 transactions with output suppressed...
+Vuser 40:RUNNING
+Vuser 40:Processing 1000000 transactions with output suppressed...
+Vuser 41:RUNNING
+Vuser 41:Processing 1000000 transactions with output suppressed...
+Vuser 42:RUNNING
+Vuser 42:Processing 1000000 transactions with output suppressed...
+Vuser 43:RUNNING
+Vuser 43:Processing 1000000 transactions with output suppressed...
+Vuser 44:RUNNING
+Vuser 44:Processing 1000000 transactions with output suppressed...
+Vuser 45:RUNNING
+Vuser 45:Processing 1000000 transactions with output suppressed...
+Vuser 46:RUNNING
+Vuser 46:Processing 1000000 transactions with output suppressed...
+Vuser 47:RUNNING
+Vuser 47:Processing 1000000 transactions with output suppressed...
+Vuser 48:RUNNING
+Vuser 48:Processing 1000000 transactions with output suppressed...
+Vuser 49:RUNNING
+Vuser 49:Processing 1000000 transactions with output suppressed...
+Vuser 50:RUNNING
+Vuser 50:Processing 1000000 transactions with output suppressed...
+Vuser 51:RUNNING
+Vuser 51:Processing 1000000 transactions with output suppressed...
+Vuser 52:RUNNING
+Vuser 52:Processing 1000000 transactions with output suppressed...
+Vuser 53:RUNNING
+Vuser 53:Processing 1000000 transactions with output suppressed...
+Vuser 54:RUNNING
+Vuser 54:Processing 1000000 transactions with output suppressed...
+Vuser 55:RUNNING
+Vuser 55:Processing 1000000 transactions with output suppressed...
+Vuser 56:RUNNING
+Vuser 56:Processing 1000000 transactions with output suppressed...
+Vuser 57:RUNNING
+Vuser 57:Processing 1000000 transactions with output suppressed...
+Vuser 58:RUNNING
+Vuser 58:Processing 1000000 transactions with output suppressed...
+Vuser 59:RUNNING
+Vuser 59:Processing 1000000 transactions with output suppressed...
+Vuser 60:RUNNING
+Vuser 60:Processing 1000000 transactions with output suppressed...
+Vuser 61:RUNNING
+Vuser 61:Processing 1000000 transactions with output suppressed...
+Vuser 62:RUNNING
+Vuser 62:Processing 1000000 transactions with output suppressed...
+Vuser 63:RUNNING
+Vuser 63:Processing 1000000 transactions with output suppressed...
+Vuser 64:RUNNING
+Vuser 64:Processing 1000000 transactions with output suppressed...
+Vuser 65:RUNNING
+Vuser 65:Processing 1000000 transactions with output suppressed...
+Vuser 1:Rampup 1 minutes complete ...
+Timer: 1 minutes elapsed
+Vuser 1:Rampup 2 minutes complete ...
+Vuser 1:Rampup complete, Taking start Transaction Count.
+Vuser 1:Timing test period of 5 in minutes
+Timer: 2 minutes elapsed
+Vuser 1:1 ...,
+Timer: 3 minutes elapsed
+Vuser 1:2 ...,
+Timer: 4 minutes elapsed
+Vuser 1:3 ...,
+Timer: 5 minutes elapsed
+Vuser 1:4 ...,
+Timer: 6 minutes elapsed
+Vuser 1:5 ...,
+Vuser 1:Test complete, Taking end Transaction Count.
+Vuser 1:64 Active Virtual Users configured
+Vuser 1:TEST RESULT : System achieved 711 NOPM from 2256 MySQL TPM
+Vuser 1:FINISHED SUCCESS
+Vuser 27:FINISHED SUCCESS
+Vuser 58:FINISHED SUCCESS
+Vuser 35:FINISHED SUCCESS
+Vuser 6:FINISHED SUCCESS
+Vuser 5:FINISHED SUCCESS
+Vuser 49:FINISHED SUCCESS
+Vuser 32:FINISHED SUCCESS
+Vuser 21:FINISHED SUCCESS
+Vuser 3:FINISHED SUCCESS
+Vuser 26:FINISHED SUCCESS
+Vuser 33:FINISHED SUCCESS
+Vuser 52:FINISHED SUCCESS
+Vuser 44:FINISHED SUCCESS
+Vuser 14:FINISHED SUCCESS
+Vuser 24:FINISHED SUCCESS
+Vuser 61:FINISHED SUCCESS
+Vuser 16:FINISHED SUCCESS
+Vuser 50:FINISHED SUCCESS
+Vuser 47:FINISHED SUCCESS
+Vuser 17:FINISHED SUCCESS
+Vuser 30:FINISHED SUCCESS
+Vuser 62:FINISHED SUCCESS
+Vuser 37:FINISHED SUCCESS
+Vuser 59:FINISHED SUCCESS
+Vuser 18:FINISHED SUCCESS
+Vuser 8:FINISHED SUCCESS
+Vuser 54:FINISHED SUCCESS
+Vuser 45:FINISHED SUCCESS
+Vuser 40:FINISHED SUCCESS
+Vuser 25:FINISHED SUCCESS
+Vuser 4:FINISHED SUCCESS
+Vuser 48:FINISHED SUCCESS
+Vuser 20:FINISHED SUCCESS
+Vuser 39:FINISHED SUCCESS
+Vuser 65:FINISHED SUCCESS
+Vuser 43:FINISHED SUCCESS
+Vuser 23:FINISHED SUCCESS
+Vuser 12:FINISHED SUCCESS
+Timer: 7 minutes elapsed
+Vuser 19:FINISHED SUCCESS
+Vuser 46:FINISHED SUCCESS
+Vuser 7:FINISHED SUCCESS
+Vuser 13:FINISHED SUCCESS
+Vuser 29:FINISHED SUCCESS
+Vuser 2:FINISHED SUCCESS
+Vuser 56:FINISHED SUCCESS
+Vuser 64:FINISHED SUCCESS
+Vuser 41:FINISHED SUCCESS
+Vuser 42:FINISHED SUCCESS
+Vuser 57:FINISHED SUCCESS
+Vuser 36:FINISHED SUCCESS
+Vuser 34:FINISHED SUCCESS
+Vuser 15:FINISHED SUCCESS
+Vuser 60:FINISHED SUCCESS
+Vuser 31:FINISHED SUCCESS
+Vuser 28:FINISHED SUCCESS
+Vuser 63:FINISHED SUCCESS
+Vuser 22:FINISHED SUCCESS
+Vuser 9:FINISHED SUCCESS
+Vuser 11:FINISHED SUCCESS
+Vuser 10:FINISHED SUCCESS
+Vuser 38:FINISHED SUCCESS
+Vuser 53:FINISHED SUCCESS
+Vuser 55:FINISHED SUCCESS
+Vuser 51:FINISHED SUCCESS
+ALL VIRTUAL USERS COMPLETE
+vudestroy success
+TEST SEQUENCE COMPLETE
