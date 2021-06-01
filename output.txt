@@ -1,0 +1,4 @@
+Dropping the database is potentially a very bad thing to do.
+Any data stored in the database will be destroyed.
+
+Do you really want to drop the 'tpcc' database [y/N] Database "tpcc" dropped
